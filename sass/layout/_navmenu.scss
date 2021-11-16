@@ -1,0 +1,325 @@
+
+
+
+
+
+
+
+.navigation
+{
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+
+
+
+    background-color: $mikado-yellow;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 2rem;
+    left: 37rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-white, .1);
+    text-align: center;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      display: block;
+      top: 2rem;
+      right: 2rem;
+      height: 6rem;
+      width: 6rem;
+
+
+    }
+
+    @include respond(phone) {
+    }
+  }
+
+
+  //FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    //transform: scale(80);
+  }
+
+  &__checkbox:checked ~ .menu__list {
+    //opacity: 1;
+    //width: 100%;
+    display: block;
+  }
+
+
+  //ICON
+  &__icon {
+
+    display: none;
+
+    position: relative;
+    margin-top: 3.5rem;
+
+    @include respond(tab-port) {
+      margin-top: 3rem;
+
+
+    }
+
+
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $usafa-blue;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before { top: -.8rem; }
+    &::after { top: .8rem; }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+
+}
+
+
+
+.brand__title{
+  &__h{
+    display: block;
+    padding: 0;
+    margin: 0;
+    &--h2{
+      font-size: 1.8rem;
+    }
+    &--h1{
+      font-size: 2rem;
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+.menu{
+
+  position: fixed;
+  width: 100%;
+  background-color: $usafa-blue;
+  height: 11rem;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+
+
+
+
+  &__logo-box{
+
+
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    text-decoration: none;
+
+  }
+  &__logo{
+    width: 7rem;
+    height: 7rem;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+
+    @include respond(tab-port) {
+
+      height: 6rem;
+      width: 6rem;
+
+
+    }
+
+  }
+  &__brand{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2.1rem;
+    font-style: italic;
+    color: $mikado-yellow;
+    width: 25rem;
+    text-transform: uppercase;
+    text-align: left;
+    @include respond(tab-port) {
+
+
+
+    }
+
+  }
+
+
+
+  &__list{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    float: right;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2rem;
+
+    @include respond(tab-port) {
+      text-align: center;
+      background-color: $usafa-blue;
+
+      //margin-top: 2rem;
+      position: absolute;
+
+      left: 0;
+      top: 8rem;
+      width: 100%;
+      display: none;
+
+
+    }
+
+    //transform: translateY(50%);
+    &__item{
+      display: inline-block;
+      vertical-align: top;
+
+
+      @include respond(tab-port) {
+        display: block;
+        width: auto;
+      }
+
+      &__link{
+        color: $mikado-yellow;
+        font-size: 2.1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        padding: 0 2rem;
+        border-radius: 1rem;
+        &:hover{
+
+          background-color: $mikado-yellow;
+
+          color: $usafa-blue;
+          box-shadow: 0 0 .5rem $mikado-yellow;
+
+        }
+
+
+      }
+      &:hover > .menu__list__item__list{
+        display: block;
+      }
+      position: relative;
+      &__list{
+        display: none;
+        position: absolute;
+        top: 3.1rem;
+
+        list-style-type: none;
+        width: 25rem;
+        background-color: $usafa-blue;
+        @include respond(tab-port) {
+
+
+          //margin-top: 2rem;
+          position: relative;
+
+
+          width: 100%;
+          top: 0;
+
+
+
+        }
+        &__item{
+          display: block;
+
+          &__link{
+            &:hover{
+              background-color: $mikado-yellow;
+              color: $usafa-blue;
+              padding-left: 2rem;
+
+
+
+            }
+
+
+            transition: .5s;
+            text-decoration: none;
+            text-align: left;
+            color: $mikado-yellow;
+            font-size: 2.1em;
+            padding: .5rem;
+            display: block;
+            font-style: italic;
+            @include respond(tab-port) {
+
+
+              //margin-top: 2rem;
+
+              font-size: 2.1rem;
+
+
+
+
+
+            }
+
+
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+
+

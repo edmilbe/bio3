@@ -1,0 +1,914 @@
+
+
+
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  // this deafines what 1rem is;
+  font-size: 62.5%; //1 rem = 10px-; 10px/16px = 62.5%
+
+  /*
+  //1 rem = 8px-; 8px/16px = 50%
+  */
+
+
+  @include respond(tab-land){ //width < 1200?
+    font-size: 56.25%; //1 rem = 9px-; 9px/16px = 56.25%
+  }
+
+  @include respond(tab-port){ //width < 900?
+    font-size: 50%; //1 rem = 8px-; 8px/16px = 50%
+  }
+
+
+  @include respond(big-desktop){
+    font-size: 75%; //1 rem = 12px-; 12px/16px = 50%
+  }
+
+}
+/* as fontes ficam no body*/
+
+body{
+
+
+
+  box-sizing: border-box;
+  @include respond(tab-port){
+    font-size: 50%;
+    padding: 0;
+  }
+  //border: 1px solid black;
+
+}
+::selection{
+  //background-color: $color-primary;
+  //color: $color-white;
+}
+
+.body{
+  padding-top: 11rem;
+  @include respond(tab-port){
+
+    padding-top: 11rem;
+  }
+}
+
+
+
+.read{
+
+  &__content{
+    //padding: 1rem;
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+    &__title{
+      display: block;
+      //background-color: $color-black;
+      color: $color-black;
+      font-size: 3.5rem;
+      font-weight: bolder;
+      padding: 0 0 0 3rem;
+      text-align: left;
+      border-bottom: 2px solid rgba(0,0,0,.5);
+
+    }
+    &__picture{
+      width: 100%;
+      height: 40rem;
+      background-position: center;
+      background-size: cover;
+      box-shadow: 0 0 4rem rgba(0,0,0,.3);
+
+    }
+    &__text{
+      overflow: hidden;
+      padding: 2rem;
+      font-size: 2.2rem !important;
+      line-height: 1.5;
+      text-align: justify !important;
+      color: $color-black;
+
+      & > p{
+        text-indent: 5rem !important;
+        margin-bottom: 2rem !important;;
+      }
+      &__paragraph{
+        font-size: 2.2rem !important;
+
+        &--list{
+          display: block;
+          //list-style-type: upper-latin;
+
+
+          &--item{
+            font-size: 2rem !important;
+
+            display: block;
+            margin-left: 4rem;
+
+
+          }
+
+        }
+        &--list-1{
+          display: block;
+          &--item{
+            //font-size: 2rem !important;
+            width: 22rem;
+            vertical-align: top;
+            display: inline-block;
+            margin: 2rem 2rem;
+            text-align: left;
+            color: $color-1;
+
+
+            font: 1.8rem 'Fira Sans', sans-serif;
+
+          }
+        }
+      }
+      & img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__others{
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}
+
+
+
+
+
+
+.welcome-box2{
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+
+  &__text{
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    background-color: $color-3;
+    color: $color-black;
+    font-size: $default-font-size;
+    animation: moveInRight 1.5s ease-out;
+  }
+
+}
+
+.recent-post{
+  text-align: center;
+  &__item{
+    &,
+    &:link,
+    &:visited{
+      position: relative;
+
+      display: inline-block;
+
+      text-decoration: none;
+
+
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+
+      width: 35rem;
+      height: 40vh;
+      margin: 2rem;
+
+      cursor: pointer;
+
+
+
+      box-shadow: .5rem .5rem 1rem rgba(0,0,0,.6);
+
+
+
+    }
+
+    &__title{
+
+      position: absolute;
+      bottom: -.6rem;
+
+      background-color: $color-1;
+      color: $mikado-yellow;
+      padding: 1rem;
+
+      font-weight: bold;
+      text-align: left;
+      width: 100%;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+  }
+
+
+  &__item--off{
+
+    &,
+    &:link,
+    &:visited{
+      text-decoration: none;
+      width: 35rem;
+
+      &__title{
+
+        background-color: $color-3;
+        color: $color-black;
+        padding: 1rem;
+
+        margin: 1rem 0;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+
+
+    &__title{
+
+      background-color: $color-3;
+      color: $mikado-yellow;
+      padding: 1rem;
+
+      margin: 1rem 0;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}
+
+.clip{
+  &__full{
+    display: block;
+    margin: 0 auto;
+    width: 70rem;
+    &  iframe{
+      height: 50rem;
+
+    }
+  }
+
+  &__item{
+    display: inline-block;
+    margin: 1rem 2rem;
+    width: 30rem;
+
+    & iframe{
+      height: 20rem;
+
+      border: 3px solid black;
+    }
+  }
+
+}
+
+
+.document{
+  &,
+  &:link,
+  &:visited{
+    text-decoration: none;
+    font-size: $default-font-size;
+    color: $color-1;
+    padding: 1rem 0;
+    margin: 1rem auto;
+    width: 100%;
+    box-shadow: 0 0 .6rem $color-1;
+    display: block;
+
+    &:hover{
+      background-color: $color-2;
+      color: $mikado-yellow;
+    }
+  }
+
+}
+
+.pagination{
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+  &__li{
+    display: inline-block;
+  }
+  &__a{
+    &,
+    &:link,
+  &:visited{
+      font-size: $default-font-size;
+      text-decoration: none;
+      padding: 1rem;
+      background-color: $color-2;;
+      color: $mikado-yellow;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.staff{
+  text-align: center;
+  &__role{
+    width: 30rem;
+    display: block;
+  }
+  &__name{
+    text-align: center !important;
+    width: 20rem;
+    font-size: 1.5rem;
+
+  }
+  &__item{
+    &,
+    &:link,
+    &:visited{
+      width: 20rem;
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 3rem;
+      text-align: center;
+    }
+
+    &__pic{
+      width: 17rem;
+      height: 17rem;
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      box-shadow: .5rem .5rem 0 $color-1;
+      margin: 0 auto;
+      text-align: center;
+      display: inline-block;
+    }
+    &__name{
+      color: $color-1;
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.atestado{
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  &__item{
+    transition: 1s;
+
+    &,
+    &:link,
+    &:visited{
+      display: block;
+      font-size: $default-font-size;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: left;
+      color: $color-3;
+      padding: 1rem;
+      letter-spacing: .1rem;
+      border-bottom: 1rem solid transparent;
+
+    }
+    &:hover{
+      border-bottom: 1rem solid $color-3;
+      transition: 1s;
+
+    }
+  }
+}
+section.section-agenda{
+  @include respond(tab-port){
+  }
+}
+
+.header{
+  height: 6rem;
+  background-color: $usafa-blue;
+
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+
+
+
+}
+
+
+.gfd{
+
+}
+.agenda{
+
+  @include respond(tab-port){
+
+  }
+  padding-top: 1.5rem;
+  &__item{
+    box-shadow:0rem 0rem 3rem rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+    display: inline-block;
+    position: relative;
+
+    text-align: left;
+    transition: 0.6s;
+    width: 33rem;
+    &:hover{
+      background-color: $color-1;
+      .agenda__item__title{
+        color: $color-white;
+
+      }
+    }
+    @include respond(tab-port){
+      width: 90%;
+      display: inline-block;
+      vertical-align: top;
+
+
+    }
+    &__title{
+      font-size: 2rem;
+      padding: 1.2rem 1rem;
+      color: $color-3;
+      font-weight: 400;
+      display: inline-block;
+      vertical-align: middle;
+
+
+      @include respond(tab-port){
+
+        font-size: $default-font-size;
+
+        width: 40% !important;
+        display: inline-block;
+
+        padding: .5rem;
+      }
+
+    }
+    &__date{
+      background-color: $color-3;
+      color: $color-white;
+
+      text-align: center;
+      font-size: 2rem;
+      padding: 1.2rem 1rem;
+      font-weight: 400;
+      display: inline-block;
+      vertical-align: middle;
+
+
+      @include respond(tab-port){
+
+        font-size: $default-font-size;
+        width: 40% !important;
+        display: inline-block;
+
+
+
+      }
+
+    }
+  }
+  &__contacto{
+    width: 100%;
+  }
+
+
+}
+
+section{
+
+  text-align: center;
+}
+
+.activite{
+  display: inline-block;
+  vertical-align: top;
+  @include respond(tab-port){
+    width: 100%;
+
+
+  }
+  &__item{
+    text-align: left;
+    width: 40rem;
+    //border: 1rem solid transparent;
+    height: 30rem;
+
+    box-shadow: 0 0 3rem rgba(0,0,0,.3);
+    //border-radius: 1rem;
+    overflow: hidden;
+    margin: 1rem .5rem;
+    display: inline-block;
+    transition: .5s;
+    box-sizing: border-box;
+
+    @include respond(tab-port){
+      width: 90%;
+    }
+    &:hover{
+      //box-shadow: 0 0 3rem rgba(0,0,0,.5);
+      border: 1rem solid $royal-blue-dark;
+
+
+    }
+
+    &__link{
+
+    }
+    &__img{
+      background-position: center;
+      background-size: cover;
+
+      height: 20rem;
+    }
+
+    &__title{
+      font-size: 2.3rem;
+      color: $color-black;
+      font-weight: 700;
+      display: block;
+      padding: .5rem 1rem;
+    }
+    &__text{
+      font-size: $default-font-size;
+      color: $color-grey-dark;
+      padding: .5rem 1rem;
+    }
+
+
+
+  }
+
+}
+.p-relative{
+  position: relative;
+}
+.parceiro{
+  &__logo {
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  &__slogan{
+    font-size: $default-font-size;
+
+  }
+
+}
+
+
+
+
+.section-tourismzone{
+  text-align: center;
+}
+
+
+
+.tourism{
+  //margin: 2rem auto;
+  height: 65vh;
+  max-height: 40rem;
+  &__item{
+
+    display: none;
+
+    transition: openDown ease 1s;
+
+    overflow: hidden;
+    &__img{
+
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      height: 65vh;
+      max-height: 40rem;
+
+
+
+
+
+      position: relative;
+
+
+      &--zone-name{
+        position: absolute;
+        //transform: rotate(-40grad);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+
+        padding: 1rem 7rem;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $mikado-yellow;
+        background-color: $color-2;
+        width: 100%;
+
+      }
+    }
+   &__text{
+     text-align: left;
+     &__title{
+       font-size: 3.5rem;
+       font-weight: 700;
+       display: inline-block;
+       padding: 1.5rem 0;
+       color: $color-3;
+       border-bottom: 3px solid $color-3;
+     }
+     &__paragraph{
+       font-size: 2rem;
+       color: $color-3;
+       text-indent: 2rem;
+     }
+     &__link{
+       &:link,
+       &:visited{
+         font-size: 2rem;
+         color: $color-white;
+         background-color: $color-1;
+         padding: 1rem;
+         text-align: center;
+         font-weight: bold;
+         border-radius: 5rem;
+         text-decoration: none;
+       }
+       &:hover{
+         text-decoration: none;
+       }
+     }
+   }
+  }
+
+}
+
+.footer{
+  &__ul{
+    list-style-type: none;
+  }
+  padding: 3rem 0;
+
+  text-align: center;
+  color: $color-grey-light-1;
+  background-color: $color-1;
+  &__contact{
+    padding: 2px;
+
+    &__title{
+      text-align: right;
+      font-size: 2rem;
+      display: inline-block;
+      vertical-align: top;
+      @include respond(tab-port){
+        text-align: center;
+      }
+
+    }
+    &__value{
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      font-size: 2rem;
+      font-weight: 700;
+      padding-left: 1rem;
+      @include respond(tab-port){
+        text-align: center;
+      }
+    }
+  }
+  &__logo{
+
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 3px solid $color-2;
+  }
+  &__copyright{
+    //@include absCenter;
+    font-size: 2rem;
+  }
+
+}
+
+
+
+.news{
+  height: 80vh;
+
+  @include respond(tab-port) {
+    height: 40rem;
+  }
+
+
+  &__item{
+
+    width: 100%;
+    display: none;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+
+    transition: fadeIn ease 4s;
+
+
+    &:link,
+    &:visited{
+      color: $mikado-yellow;
+      transition: fadeIn ease 4s;
+    }
+
+    &__title{
+      position: absolute;
+      left: 2rem;
+      bottom: 2rem;
+      font-size: 3rem;
+      background-color: $royal-blue-dark;
+      padding: 1rem 5rem;
+      text-transform: uppercase;
+      border-radius: 10rem;
+      box-shadow: 0 0 4rem rgba(0,0,0,.4);
+      @include respond(tab-port){
+        width: 100%;
+        bottom: 0;
+        font-size: 2.5rem;
+      }
+      &:link,
+      &:visited{
+        background-color: $color-1;
+      }
+    }
+
+  }
+  &__active{
+    display: block;
+  }
+  &__marks{
+    position: absolute;
+    top: 90%;
+    right: 2%;
+
+    transform: translate(-50%, -50%);
+    @include respond(tab-port){
+      top: 70%;
+    }
+    &__item{
+      width: 3rem;
+      height: 3rem;
+
+      background-color: $color-white;
+      //border: 1px solid $color-grey-dark;
+      display: inline-block;
+      margin: 0 1rem;
+      border-radius: 50%;
+      @include respond(tab-port){
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      &--checked{
+        background-color: $color-2;
+
+      }
+    }
+  }
+}
+
+.form-section{
+
+}
+
+
+
+
+
+.popup{
+
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black,.8);
+  position: fixed;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+
+
+  &__close{
+    &,
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+      line-height: 1;
+    }
+
+    &:hover{
+      color: $color-primary;
+    }
+
+  }
+
+
+  &__content{
+
+    background-color: $color-white;
+    width: 75%;
+    box-shadow: 0 2rem 4rem rgba($color-black,.2);
+    position: absolute;
+    @include absCenter;
+
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.25);
+    transition: all .5s .2s;
+  }
+
+
+
+
+
+  //Open states
+  &:target{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content{
+    opacity:10;
+    transform: translate(-50%, -50%) scale(1);
+
+  }
+
+}
+
+
+
+.form-section{
+  padding-top: 6rem;
+}
+
+
+
+
+
+
+
+

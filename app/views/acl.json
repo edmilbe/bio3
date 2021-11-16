@@ -1,0 +1,27 @@
+{
+  "Guest" : {
+    "denied" : {},
+    "Home" : ["*"],
+    "Register" : ["login", "register", "recoveremail", "index"],
+    "Restricted" : ["*"],
+    "Ajax": ["*"],
+    "Views": ["*"]
+  },
+  "LoggedIn" : {
+    "denied" : {
+      "Register" : ["login", "register"]
+    },
+    "Register" : ["logout"],
+    "Account": ["*"]
+  },
+  "Post" : {
+    "denied" : {},
+    "Post" : ["*"],
+    "Agenda" : ["*"],
+    "Turismo" : ["*"]
+  },
+  "Admin" : {
+    "denied" : {},
+    "Admin" : ["*"]
+  }
+}

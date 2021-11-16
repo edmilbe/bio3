@@ -1,0 +1,10 @@
+.idea
+debug.log
+*.htaccess
+node_modules/*
+vendor/*
+stripe/*
+dompdf/*
+core/vendor/*
+files/stripe/*
+files/dompdf/*

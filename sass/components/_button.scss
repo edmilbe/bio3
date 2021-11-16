@@ -1,0 +1,84 @@
+.btn{
+  &,
+  &:link,
+  &:visited{
+    font-size: $default-font-size;
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 1rem;
+    background-color: $color-1;
+    color: $mikado-yellow;
+    cursor: pointer;
+
+
+    @include respond(tab-port){
+
+
+      font-size: 2rem;
+    }
+
+
+  }
+  &__okay{
+    background-color: $color-flag-1;
+    color: $color-black
+  }
+  &__decline{
+    background-color: $color-flag-2;
+    color: $color-black
+  }
+  &__imprimir{
+    background-color: $color-flag-5;
+    color: $color-black
+  }
+}
+
+
+
+
+.list-others{
+  list-style-type: none;
+  text-align: left;
+  &__item{
+    text-align: left;
+    display: inline-block;
+    margin-right: 1rem;
+    &--link{
+      &,
+      &:link,
+      &:visited {
+        padding: 1rem 2rem;
+        font-size: $default-font-size;
+        color: $color-3;
+        text-decoration: none;
+        transition: 1s;
+        border-radius: 1rem;
+      }
+      &:hover{
+        background-color: $royal-blue-dark;
+        color: $cyber-yellow;
+      }
+    }
+  }
+}
+
+
+.response{
+  display: block;
+  text-align: left;
+  &__text{
+    font-size: $default-font-size;
+    margin-left: 2rem;
+
+    &--error{
+      color: $color-flag-2;
+    }
+    &--okay{
+      color: $color-flag-4;
+    }
+
+  }
+}

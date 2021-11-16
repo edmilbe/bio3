@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-git.js"></script>
+
+</head>
+<body>
+<form method="post">
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <br><br>
+    <input type="button" id="sum" value="Somar">
+    <br><br>
+    <input type="text" readonly id="result">
+</form>
+<script>
+
+    document.getElementById("sum").onclick = function (){
+        var num1 = $("#num1").val();
+        var num2 = $("#num2").val();
+
+        $.post("ajax.php",{x : num1, y : num2},function(data){
+            document.getElementById("result").value = data;
+        });
+
+
+    };
+</script>
+</body>
+</html>

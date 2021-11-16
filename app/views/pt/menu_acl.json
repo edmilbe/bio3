@@ -1,0 +1,24 @@
+{
+  "In&iacute;cio" : "home/gr1",
+  "Iniciar Sess&atilde;o" : "register/login",
+  "Produtos" : {
+    "Novo Grupo 1":  "products/newgroup1",
+    "Novo Grupo 2":  "products/newgroup2",
+    "Novo Item":  "products/newproduct",
+    "Nova Marca":  "products/newmarca",
+    "Nova Medida":  "products/newmedida"
+
+  },
+  "Pedidos" : "shopped/index",
+  "Usu&aacute;rios" : "persons/index",
+  "Minha Conta" : {
+    "Compras":  "account/ordered",
+    "Detalhes":  "account/details",
+    "Alterar Senha":  "account/password",
+    "Terminar Sess&atilde;o":  "register/logout"
+  },
+  "Idioma" : {
+    "Portugu&ecirc;s":  "home/lang/pt",
+    "English":  "home/lang/en"
+  }
+}

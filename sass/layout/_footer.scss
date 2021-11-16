@@ -1,0 +1,53 @@
+footer{
+  font-size: $default-font-size;
+}
+
+
+
+/*footer*/
+
+footer{
+  text-align: center;
+  background-color: $color-1;
+  color: $color-3;
+}
+
+.ft-grp{
+  padding: 20px;
+}
+.links-more > a{
+  text-decoration: none;
+  color: $cyber-yellow;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bolder;
+  margin: 2px 15px;
+}
+.social-nw > a > i{
+  color: $cyber-yellow;
+  margin: 2px 15px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20pt;
+
+}
+.contacs > span{
+  display: block;
+  color: $cyber-yellow;
+  margin: 5px auto;
+  text-decoration: none;
+}
+span.opaco{
+  opacity: 0.8;
+}
+.copy{
+  padding: 20px auto;
+}
+.divide{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid $cyber-yellow;
+}
+

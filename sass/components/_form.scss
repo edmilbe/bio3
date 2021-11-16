@@ -1,0 +1,170 @@
+.form{
+
+  &-section{
+
+    width: 100%;
+    max-width: 100rem;
+    padding: 1rem;
+    //background-color: rgba(0,0,0,.1);
+    margin: 3rem auto;
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+    border-radius: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    @include respond(tab-port){
+      width: 95%;
+      margin: 1rem;
+      box-sizing: border-box;
+
+    }
+  }
+
+
+
+  &__group{
+    width: 46rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1rem;
+    padding: .5rem;
+
+    @include respond(tab-port){
+      width: 100%;
+    }
+    &--1{
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+
+    }
+    &--2{
+      text-align: left;
+    }
+    &--3{
+      display: block;
+      text-align: left;
+    }
+
+
+    &-25{width: 25%;}
+    &-35{width: 35%;
+
+
+
+    }
+    &--min{
+      width: 15%;
+      vertical-align: bottom;
+    }
+
+  }
+  &__label{
+    font-size: 1.5rem;
+    color: $royal-blue-dark;
+    display: block;
+    font-weight: 700;
+
+    &__about{
+      font-size: 1rem;
+      color: $usafa-blue;
+    }
+  }
+  &__input{
+    width: 100%;
+    font-size: $default-font-size;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.4);
+    text-align: center;
+    padding: 1rem;
+    outline: none;
+
+    &:focus{
+      outline: none;
+      box-shadow: 0 0 1rem rgba(0,0,0,.6);
+
+    }
+    @include respond(tab-port){
+      box-sizing: border-box;
+      border-radius: 2rem;
+      width: 100%;
+      font-size: 2rem;
+    }
+
+
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+    color: $dark-cornflower-blue;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $dark-cornflower-blue;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $dark-cornflower-blue;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+
+
+
+
+
+  &__link{
+    &,
+    &:link,
+    &:visited{
+      padding: .5rem 1rem;
+
+      color: $color-1;
+      font-size: 2rem;
+
+
+    }
+  }
+
+  & #pai2:checked ~ & #pai-field {
+    display: none;
+  }
+
+}

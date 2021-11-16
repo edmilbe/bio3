@@ -1,0 +1,49 @@
+{
+  "Início" : "home/index",
+  "Nossas Atividades" : "home/posts",
+  "Sobre Nós" : {
+    "O que é MB-STP":  "home/aboutus#whats",
+    "Nossos Objetivos":  "home/aboutus#goals",
+    "Nossos Membros":  "home/aboutus#members",
+    "Nossos Meios de Ações":  "home/aboutus#actions",
+    "Nossos Parceiros":  "home/aboutus#friends",
+    "Área de Intervenção":  "home/aboutus#sectors",
+    "Órgãos Sociais":  "home/aboutus#composition",
+    "Relatório de Atividades do MB-STP":  "home/docs#mbstp",
+    "Galeria":  "home/index"
+  },
+  "Projeto OM4D" : {
+    "O que é OM4D":  "home/om4dabout#whats",
+    "As Componentes do Projeto":  "home/om4dabout#components",
+    "Nossas Realizações":  "home/om4dabout#dones",
+    "Os Parceiros":  "home/om4dabout#friends",
+    "Nossa Equipa":  "home/om4dabout#team",
+    "Onde Encontrar Produtos Biológicos":  "home/om4dabout#wherefind",
+    "Relatório de Atividades de OM4D":  "home/docs#om4d",
+    "Galeria":  "home/index"
+  },
+  "Certificação SPG" : {
+    "O que é":  "home/spg#whats",
+    "Nossa Iniciativa":  "home/spg#goals",
+    "Galeria":  "home/spg#gallery",
+    "Contactos":  "home/spg#contact"
+  },
+  "Admin":{
+    "Localidades" : "admin/addlocalidade",
+    "Distritos" : "admin/adddistrito",
+    "Paises" : "admin/addpais",
+    "Previlégios" : "admin/users"
+  },
+  "Minha Conta" : {
+    "Perfil":  "account/details",
+    "Mudar Senha":  "account/password",
+    "Sair":  "register/logout"
+  },
+  "Conteúdos" : {
+    "Postagem":  "post/index",
+    "Associações":  "post/newassociation",
+    "Membros":  "post/addmember",
+    "Staff":  "post/staff",
+    "Documentos":  "post/docs"
+  }
+}
